@@ -1,0 +1,37 @@
+/* [project]/apps/web/src/components/BannerBlock.module.css [app-client] (css) */
+.BannerBlock-module__Fd5RdW__wrap {
+  border: 1px solid var(--border);
+  background: #11182673;
+  border-radius: 14px;
+  margin-top: 18px;
+  padding: 14px;
+}
+
+.BannerBlock-module__Fd5RdW__row {
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  display: flex;
+}
+
+.BannerBlock-module__Fd5RdW__item {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  display: inline-flex;
+}
+
+.BannerBlock-module__Fd5RdW__item img {
+  width: auto;
+  height: 28px;
+  display: block;
+}
+
+.BannerBlock-module__Fd5RdW__small {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/*# sourceMappingURL=apps_web_src_components_BannerBlock_module_css_bad6b30c._.single.css.map*/

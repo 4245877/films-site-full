@@ -1,0 +1,119 @@
+[00:00:05.860] Server  LOG      ✓ Ready in 4.5s
+[00:00:10.872] Server  LOG      ○ Compiling / ...
+[00:00:14.983] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:52.555] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:53.666] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:06.783] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:09.772] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:09.778] Server  ERROR   D:\РОТОТА\films-site\apps\web\.next\dev\server\chunks\ssr\node_modules_next_dist_38208132._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:09.786] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:09.789] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:09.790] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:09.791] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:09.793] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:09.794] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:09.796] Server  ERROR    ⨯ Error: The default export is not a React Component in "/page"
+[00:01:09.801] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:09.801] Server  ERROR   D:\РОТОТА\films-site\apps\web\.next\dev\server\chunks\ssr\node_modules_next_dist_38208132._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:09.802] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:09.802] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:09.802] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:09.803] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:09.803] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:09.803] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:09.804] Server  ERROR    ⨯ Error: The default export is not a React Component in "/page"
+[00:01:09.829] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:09.830] Server  ERROR   D:\РОТОТА\films-site\apps\web\.next\dev\server\chunks\ssr\node_modules_next_dist_38208132._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:09.830] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:09.831] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:09.831] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:09.831] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:09.832] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:09.832] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:09.832] Server  ERROR    ⨯ Error: The default export is not a React Component in "/page"
+[00:01:09.835] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:09.836] Server  ERROR   D:\РОТОТА\films-site\apps\web\.next\dev\server\chunks\ssr\node_modules_next_dist_38208132._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:09.837] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:09.837] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:09.838] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:09.838] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:09.838] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:09.839] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:09.839] Server  ERROR    ⨯ Error: The default export is not a React Component in "/page"
+[00:01:10.674] Browser ERROR   Failed to fetch RSC payload for http://localhost:3000/. Falling back to browser navigation. {}
+[00:01:10.904] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:10.905] Server  ERROR   D:\РОТОТА\films-site\apps\web\.next\dev\server\chunks\ssr\node_modules_next_dist_38208132._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:10.905] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:10.906] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:10.906] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:10.907] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:10.907] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:10.907] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:10.907] Server  ERROR    ⨯ Error: The default export is not a React Component in "/page"
+[00:01:10.910] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:10.910] Server  ERROR   D:\РОТОТА\films-site\apps\web\.next\dev\server\chunks\ssr\node_modules_next_dist_38208132._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:10.910] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:10.911] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:10.911] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:10.912] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:10.912] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:10.912] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:10.913] Server  ERROR    ⨯ Error: The default export is not a React Component in "/page"
+[00:01:11.577] Server  ERROR   Error: Objects are not valid as a React child (found: object with keys {$$typeof, type, key, ref, props, _owner, _store}). If you meant to render a collection of children, use an array instead.
+[00:01:11.579] Server  ERROR    ⨯ Error: Objects are not valid as a React child (found: object with keys {$$typeof, type, key, ref, props, _owner, _store}). If you meant to render a collection of children, use an array instead.
+[00:01:11.580] Server  ERROR    ⨯ Error: Objects are not valid as a React child (found: object with keys {$$typeof, type, key, ref, props, _owner, _store}). If you meant to render a collection of children, use an array instead.
+[00:01:11.587] Server  ERROR   Error: Objects are not valid as a React child (found: object with keys {$$typeof, type, key, ref, props, _owner, _store}). If you meant to render a collection of children, use an array instead.
+[00:01:11.588] Server  ERROR    ⨯ Error: Objects are not valid as a React child (found: object with keys {$$typeof, type, key, ref, props, _owner, _store}). If you meant to render a collection of children, use an array instead.
+[00:01:11.589] Server  ERROR    ⨯ Error: Objects are not valid as a React child (found: object with keys {$$typeof, type, key, ref, props, _owner, _store}). If you meant to render a collection of children, use an array instead.
+[00:01:11.595] Server  ERROR   Error: Objects are not valid as a React child (found: object with keys {$$typeof, type, key, ref, props, _owner, _store}). If you meant to render a collection of children, use an array instead.
+[00:01:11.596] Server  ERROR    ⨯ Error: Objects are not valid as a React child (found: object with keys {$$typeof, type, key, ref, props, _owner, _store}). If you meant to render a collection of children, use an array instead.
+[00:01:11.598] Server  ERROR    ⨯ Error: Objects are not valid as a React child (found: object with keys {$$typeof, type, key, ref, props, _owner, _store}). If you meant to render a collection of children, use an array instead.
+[00:01:12.057] Browser ERROR   uncaughtError: Error: Objects are not valid as a React child (found: object with keys {$$typeof, type, key, ref, props, _owner, _store}). If you meant to render a collection of children, use an array instead.
+[00:01:13.813] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:14.453] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:22.032] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:17:39.562] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:17:40.040] Server  ERROR    ⨯ Failed to generate static paths for /[locale]:
+[00:17:40.041] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:17:40.042] Server  ERROR   Error: Page "/[locale]/(site)/page" is missing param "/[locale]" in "generateStaticParams()", which is required with "output: export" config.
+[00:18:38.579] Server  LOG      ✓ Compiled in 166ms
+[00:18:47.063] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[01:12:47.549] Server  ERROR    ⨯ Failed to generate static paths for /[locale]:
+[01:12:47.550] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[01:12:47.550] Server  ERROR   Error: Page "/[locale]/(site)/page" is missing param "/[locale]" in "generateStaticParams()", which is required with "output: export" config.
+[01:47:50.744] Server  LOG      ✓ Compiled in 355ms
+[01:48:03.573] Server  LOG      ✓ Compiled in 5ms
+[01:48:08.554] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:48:08.586] Server  ERROR    ⨯ Failed to generate static paths for /[locale]:
+[01:48:08.586] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[01:48:08.588] Server  ERROR   Error: Page "/[locale]/(site)/page" is missing param "/[locale]" in "generateStaticParams()", which is required with "output: export" config.
+[01:48:17.100] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[01:48:25.817] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:48:25.885] Server  ERROR    ⨯ Failed to generate static paths for /[locale]:
+[01:48:25.885] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[01:48:25.886] Server  ERROR   Error: Page "/[locale]/(site)/page" is missing param "/[locale]" in "generateStaticParams()", which is required with "output: export" config.
+[01:48:51.803] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:48:51.842] Server  ERROR    ⨯ Failed to generate static paths for /[locale]:
+[01:48:51.842] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[01:48:51.842] Server  ERROR   Error: Page "/[locale]/(site)/page" is missing param "/[locale]" in "generateStaticParams()", which is required with "output: export" config.
+[01:50:39.878] Server  LOG      ✓ Compiled in 4ms
+[01:51:54.760] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:51:54.777] Server  ERROR    ⨯ Failed to generate static paths for /[locale]:
+[01:51:54.778] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[01:51:54.778] Server  ERROR   Error: Page "/[locale]/(site)/page" is missing param "/[locale]" in "generateStaticParams()", which is required with "output: export" config.
+[01:53:53.326] Server  ERROR    ⨯ Failed to generate static paths for /[locale]:
+[01:53:53.327] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[01:53:53.327] Server  ERROR   Error: Page "/[locale]/(site)/page" is missing param "/[locale]" in "generateStaticParams()", which is required with "output: export" config.
+[01:54:03.248] Server  ERROR    ⨯ Failed to generate static paths for /[locale]:
+[01:54:03.249] Server  ERROR   D:\РОТОТА\films-site\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[01:54:03.249] Server  ERROR   Error: Page "/[locale]/(site)/page" is missing param "/[locale]" in "generateStaticParams()", which is required with "output: export" config.
+[01:54:03.249] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:56:37.237] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:56:44.483] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[02:02:46.249] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:02:53.204] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:04:56.218] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[02:46:40.409] Server  LOG      ✓ Compiled in 5ms
+[02:46:43.087] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:46:47.456] Server  LOG      ✓ Compiled in 4ms
+[02:46:50.594] Server  LOG      ✓ Compiled in 5ms

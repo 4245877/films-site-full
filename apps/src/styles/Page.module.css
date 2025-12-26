@@ -1,0 +1,653 @@
+/* Page.module.css */
+
+/* ============================================
+   CONTAINER & LAYOUT
+   ============================================ */
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 32px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding: 0 48px;
+  }
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.hero {
+  padding: clamp(60px, 12vh, 120px) 0 clamp(48px, 8vh, 80px);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero {
+    animation: fadeInUp 0.8s var(--ease-out) backwards;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.h1 {
+  margin: 0 auto 24px;
+  max-width: 20ch;
+  background: linear-gradient(
+    135deg,
+    var(--text) 0%,
+    color-mix(in oklab, var(--text) 70%, var(--accent)) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .h1 {
+    animation: fadeInUp 0.8s var(--ease-out) 0.1s backwards;
+  }
+}
+
+.lead {
+  font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+  line-height: 1.65;
+  color: var(--muted);
+  max-width: 48ch;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .lead {
+    animation: fadeInUp 0.8s var(--ease-out) 0.2s backwards;
+  }
+}
+
+/* ============================================
+   BANNER SECTION
+   ============================================ */
+
+.bannerSection {
+  margin: clamp(48px, 8vh, 80px) 0;
+  position: relative;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .bannerSection {
+    animation: fadeInUp 0.8s var(--ease-out) 0.3s backwards;
+  }
+}
+
+/* ============================================
+   FEATURED SECTION
+   ============================================ */
+
+.featuredSection {
+  margin: clamp(64px, 10vh, 100px) 0;
+  position: relative;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .featuredSection {
+    animation: fadeInUp 0.8s var(--ease-out) 0.4s backwards;
+  }
+}
+
+.sectionHeader {
+  margin-bottom: clamp(32px, 5vh, 48px);
+}
+
+.h2 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 12px;
+}
+
+.h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--accent),
+    var(--accent-secondary)
+  );
+  border-radius: 2px;
+  transition: width var(--dur-3) var(--ease-out);
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .sectionHeader:hover .h2::after {
+    width: 100%;
+  }
+}
+
+.featuredContent {
+  display: grid;
+  gap: clamp(32px, 5vw, 48px);
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .featuredContent {
+    grid-template-columns: 1fr 1.5fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .featuredContent {
+    grid-template-columns: 1fr 1.75fr;
+    gap: 64px;
+  }
+}
+
+/* ============================================
+   POSTER
+   ============================================ */
+
+.posterWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.poster {
+  position: relative;
+  aspect-ratio: 2/3;
+  background: var(--panel);
+  border-radius: var(--radius-2);
+  overflow: hidden;
+  box-shadow: var(--shadow-2);
+  transition: 
+    transform var(--dur-3) var(--ease-out),
+    box-shadow var(--dur-3) var(--ease-out);
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .poster:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-3);
+  }
+}
+
+.poster::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    color-mix(in oklab, var(--accent-secondary) 20%, transparent),
+    color-mix(in oklab, var(--accent) 20%, transparent)
+  );
+  opacity: 0;
+  transition: opacity var(--dur-3) var(--ease-out);
+  z-index: 1;
+}
+
+@media (hover: hover) {
+  .poster:hover::before {
+    opacity: 1;
+  }
+}
+
+.posterPlaceholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  background: linear-gradient(
+    135deg,
+    color-mix(in oklab, var(--border) 40%, transparent),
+    color-mix(in oklab, var(--border) 60%, transparent)
+  );
+}
+
+/* ============================================
+   MOVIE INFO
+   ============================================ */
+
+.movieInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.h3 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+.description {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0;
+}
+
+.metaList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.metaItem {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  padding: 12px 0;
+  border-bottom: 1px solid color-mix(in oklab, var(--border) 50%, transparent);
+  transition: border-color var(--dur-2) var(--ease-out);
+}
+
+@media (hover: hover) {
+  .metaItem:hover {
+    border-color: var(--border);
+  }
+}
+
+.metaItem:last-child {
+  border-bottom: none;
+}
+
+.metaLabel {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--muted);
+  min-width: 90px;
+}
+
+.metaValue {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text);
+}
+
+/* ============================================
+   ACTIONS (BUTTONS)
+   ============================================ */
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.buttonPrimary,
+.buttonSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--radius-1);
+  text-decoration: none;
+  transition: all var(--dur-2) var(--ease-out);
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.buttonPrimary::before,
+.buttonSecondary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    transparent,
+    color-mix(in oklab, currentColor 10%, transparent)
+  );
+  opacity: 0;
+  transition: opacity var(--dur-2) var(--ease-out);
+}
+
+@media (hover: hover) {
+  .buttonPrimary:hover::before,
+  .buttonSecondary:hover::before {
+    opacity: 1;
+  }
+}
+
+.buttonPrimary {
+  background: linear-gradient(
+    135deg,
+    var(--accent),
+    color-mix(in oklab, var(--accent) 85%, var(--accent-secondary))
+  );
+  color: white;
+  box-shadow: 
+    0 2px 8px color-mix(in oklab, var(--accent) 20%, transparent),
+    0 8px 24px color-mix(in oklab, var(--accent) 12%, transparent);
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .buttonPrimary:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+      0 4px 12px color-mix(in oklab, var(--accent) 25%, transparent),
+      0 12px 32px color-mix(in oklab, var(--accent) 18%, transparent);
+  }
+}
+
+.buttonPrimary:active {
+  transform: translateY(0);
+}
+
+.buttonSecondary {
+  background: var(--panel);
+  color: var(--text);
+  border: 2px solid var(--border);
+  box-shadow: var(--shadow-1);
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .buttonSecondary:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-2);
+  }
+}
+
+.buttonSecondary:active {
+  transform: translateY(0);
+}
+
+/* ============================================
+   MOOD SECTION
+   ============================================ */
+
+.moodSection {
+  margin: clamp(80px, 12vh, 120px) 0;
+  position: relative;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .moodSection {
+    animation: fadeInUp 0.8s var(--ease-out) 0.5s backwards;
+  }
+}
+
+.cardGrid {
+  display: grid;
+  gap: 24px;
+}
+
+@media (min-width: 640px) {
+  .cardGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cardGrid {
+    gap: 40px;
+  }
+}
+
+.moodCard {
+  background: var(--panel);
+  border-radius: var(--radius-2);
+  padding: clamp(28px, 5vw, 40px);
+  box-shadow: var(--shadow-1);
+  border: 1px solid color-mix(in oklab, var(--border) 60%, transparent);
+  transition: all var(--dur-3) var(--ease-out);
+  position: relative;
+  overflow: hidden;
+}
+
+.moodCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    color-mix(in oklab, var(--accent-secondary) 8%, transparent),
+    color-mix(in oklab, var(--accent) 8%, transparent)
+  );
+  opacity: 0;
+  transition: opacity var(--dur-3) var(--ease-out);
+  z-index: 0;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .moodCard:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-3);
+    border-color: var(--accent);
+  }
+
+  .moodCard:hover::before {
+    opacity: 1;
+  }
+}
+
+.moodCard > * {
+  position: relative;
+  z-index: 1;
+}
+
+.cardTitle {
+  margin: 0 0 16px;
+  font-size: clamp(1.375rem, 3vw, 1.625rem);
+}
+
+.cardDescription {
+  margin: 0 0 24px;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.cardLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  transition: gap var(--dur-2) var(--ease-spring);
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .cardLink:hover {
+    gap: 12px;
+  }
+}
+
+.arrow {
+  display: inline-block;
+  font-size: 1.25rem;
+  transition: transform var(--dur-2) var(--ease-spring);
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .cardLink:hover .arrow {
+    transform: translateX(4px);
+  }
+}
+
+/* ============================================
+   QUOTE FOOTER
+   ============================================ */
+
+.quoteSection {
+  margin: clamp(80px, 12vh, 120px) 0 clamp(60px, 10vh, 100px);
+  padding: clamp(48px, 8vh, 72px) 0;
+  border-top: 1px solid color-mix(in oklab, var(--border) 50%, transparent);
+  position: relative;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .quoteSection {
+    animation: fadeInUp 0.8s var(--ease-out) 0.6s backwards;
+  }
+}
+
+.quote {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  padding: 0 clamp(20px, 4vw, 40px);
+}
+
+.quote::before {
+  content: '"';
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: clamp(80px, 15vw, 120px);
+  font-weight: 700;
+  color: color-mix(in oklab, var(--accent) 15%, transparent);
+  line-height: 1;
+  font-family: Georgia, serif;
+  pointer-events: none;
+}
+
+.quoteText {
+  font-size: clamp(1.25rem, 3vw, 1.625rem);
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--text);
+  margin: 0 0 20px;
+  font-weight: 400;
+}
+
+.quoteAuthor {
+  display: block;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+@media (max-width: 767px) {
+  .featuredContent {
+    text-align: center;
+  }
+
+  .movieInfo {
+    align-items: center;
+  }
+
+  .description,
+  .metaList {
+    text-align: left;
+  }
+
+  .actions {
+    justify-content: center;
+  }
+
+  .buttonPrimary,
+  .buttonSecondary {
+    flex: 1;
+    min-width: 140px;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY & PERFORMANCE
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero,
+  .bannerSection,
+  .featuredSection,
+  .moodSection,
+  .quoteSection,
+  .h1,
+  .lead {
+    animation: none !important;
+  }
+
+  .poster,
+  .moodCard,
+  .buttonPrimary,
+  .buttonSecondary {
+    transition: 
+      opacity var(--dur-2) ease,
+      box-shadow var(--dur-2) ease;
+  }
+
+  .poster:hover,
+  .moodCard:hover,
+  .buttonPrimary:hover,
+  .buttonSecondary:hover {
+    transform: none;
+  }
+
+  .cardLink:hover,
+  .cardLink:hover .arrow {
+    transform: none;
+  }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .poster,
+  .moodCard,
+  .buttonPrimary,
+  .buttonSecondary {
+    box-shadow: none;
+    border: 1px solid #000;
+  }
+
+  .buttonPrimary,
+  .buttonSecondary {
+    display: none;
+  }
+}

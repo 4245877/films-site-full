@@ -1,0 +1,605 @@
+/* apps/web/src/app/globals.css */
+
+/* ============================================
+   1. VARIABLES & THEME CONFIGURATION
+   ============================================ */
+:root {
+  color-scheme: light dark;
+
+  /* --- Палитра (фиксированные цвета) --- */
+  --c-brand-900: #4A0E10; /* самый тёмный бордовый */
+  --c-brand-800: #8B1C24; /* глубокий красный */
+  --c-brand-600: #C33D2E; /* основной акцент */
+  --c-brand-300: #D67E7A; /* мягкий розово-красный */
+  --c-gold-500: #DAA520;  /* золото */
+  --c-ink-900: #2A2A2A;   /* почти чёрный */
+  --c-ink-800: #353535;   /* тёмно-серый */
+  --c-paper-50: #fffcfa;  /* тёплый фон */
+  --c-white: #FFFFFF;     /* белый */
+
+  /* --- Семантика --- */
+  --bg: var(--c-paper-50);
+  --panel: var(--c-white);
+  --text: var(--c-ink-900);
+  --muted: var(--c-ink-800);
+
+  --border: color-mix(in oklab, var(--text) 14%, var(--bg));
+  --border-strong: color-mix(in oklab, var(--text) 22%, var(--bg));
+
+  --accent: var(--c-brand-600);
+  --accent-strong: var(--c-brand-800);
+  --accent-soft: var(--c-brand-300);
+  --accent-secondary: var(--c-gold-500);
+
+  /* UI статусы (в рамках палитры) */
+  --success: var(--c-gold-500);
+  --warning: var(--c-brand-300);
+  --error: var(--c-brand-600);
+  --info: var(--c-brand-800);
+
+  /* --- Геометрия --- */
+  --container: 1200px;
+  --radius-1: 12px;
+  --radius-2: 16px;
+  --radius-3: 24px;
+
+  /* --- Тени (тёплые, нейтральные) --- */
+  --shadow-1:
+    0 1px 3px rgba(0, 0, 0, 0.06),
+    0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-2:
+    0 4px 12px rgba(0, 0, 0, 0.08),
+    0 20px 48px rgba(0, 0, 0, 0.12);
+  --shadow-3:
+    0 8px 32px rgba(0, 0, 0, 0.12),
+    0 32px 64px rgba(0, 0, 0, 0.16);
+
+  /* --- Анимация и время --- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --dur-1: 150ms;
+  --dur-2: 250ms;
+  --dur-3: 400ms;
+  --dur-4: 600ms;
+
+  --transition-fast: var(--dur-1) var(--ease-out);
+  --transition-base: var(--dur-2) var(--ease-out);
+  --transition-slow: var(--dur-3) var(--ease-out);
+
+  /* --- Фокус --- */
+  --focus-ring: 0 0 0 3px color-mix(in oklab, var(--accent) 28%, transparent);
+
+  /* --- Типографика --- */
+  --font-body: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-display: var(--font-body);
+
+  /* --- Z-Index слои --- */
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-modal: 300;
+  --z-toast: 400;
+}
+
+/* Переопределения для тёмной темы */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: var(--c-ink-900);
+    --panel: var(--c-ink-800);
+    --text: var(--c-paper-50);
+    --muted: color-mix(in oklab, var(--c-paper-50) 72%, var(--c-ink-900));
+
+    --border: color-mix(in oklab, var(--c-paper-50) 18%, var(--c-ink-900));
+    --border-strong: color-mix(in oklab, var(--c-paper-50) 28%, var(--c-ink-900));
+
+    --accent: var(--c-brand-600);
+    --accent-strong: var(--c-brand-300);
+    --accent-soft: color-mix(in oklab, var(--c-brand-300) 70%, var(--c-ink-900));
+    --accent-secondary: var(--c-gold-500);
+
+    /* Более глубокие тени */
+    --shadow-1:
+      0 1px 3px rgba(0, 0, 0, 0.55),
+      0 8px 24px rgba(0, 0, 0, 0.65),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+    --shadow-2:
+      0 4px 12px rgba(0, 0, 0, 0.65),
+      0 20px 48px rgba(0, 0, 0, 0.75),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+    --shadow-3:
+      0 8px 32px rgba(0, 0, 0, 0.75),
+      0 32px 64px rgba(0, 0, 0, 0.85),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+
+    --focus-ring: 0 0 0 3px color-mix(in oklab, var(--accent) 38%, transparent);
+
+    --success: var(--c-gold-500);
+    --warning: var(--c-brand-300);
+    --error: var(--c-brand-600);
+    --info: var(--c-gold-500);
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --border: currentColor;
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --text: var(--c-ink-900);
+    --bg: var(--c-white);
+    --panel: var(--c-white);
+    --border: var(--c-ink-900);
+    --accent: var(--c-brand-800);
+    --success: var(--c-gold-500);
+    --warning: var(--c-brand-300);
+    --error: var(--c-brand-600);
+    --info: var(--c-ink-800);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text: var(--c-white);
+      --bg: var(--c-ink-900);
+      --panel: var(--c-ink-900);
+      --border: var(--c-white);
+      --accent: var(--c-brand-300);
+    }
+  }
+}
+
+/* ============================================
+   2. RESET & BASE STYLES
+   ============================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) var(--bg);
+}
+
+body {
+  min-height: 100vh;
+  color: var(--text);
+  font-family: var(--font-body);
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(
+      ellipse 1200px 800px at 10% -5%,
+      color-mix(in oklab, var(--accent-secondary) 14%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      ellipse 1200px 800px at 90% 10%,
+      color-mix(in oklab, var(--accent) 12%, transparent),
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 900px 650px at 50% 100%,
+      color-mix(in oklab, var(--accent-strong) 10%, transparent),
+      transparent 55%
+    );
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  overflow-x: hidden;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-variant-ligatures: common-ligatures;
+
+  transition:
+    background-color var(--dur-3) var(--ease-out),
+    color var(--dur-3) var(--ease-out);
+
+  accent-color: var(--accent);
+}
+
+/* Анимация появления страницы */
+@media (prefers-reduced-motion: no-preference) {
+  body {
+    background-attachment: fixed;
+    animation: bodyFadeIn 0.6s var(--ease-out);
+  }
+}
+
+/* Mobile: не фиксируем фон (меньше лагов на iOS/Android) */
+@media (max-width: 767px) {
+  body {
+    background-attachment: scroll;
+  }
+}
+
+/* ============================================
+   3. TYPOGRAPHY
+   ============================================ */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  color: var(--text);
+  text-wrap: balance;
+  position: relative;
+  transition: color var(--dur-2) var(--ease-out);
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); letter-spacing: -0.03em; }
+h2 { font-size: clamp(1.75rem, 4vw, 2.75rem); }
+h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  h1:hover, h2:hover, h3:hover {
+    color: var(--accent);
+  }
+}
+
+p {
+  line-height: 1.7;
+  color: var(--text);
+  text-wrap: pretty;
+  max-width: 70ch;
+}
+
+strong { font-weight: 600; color: var(--text); }
+em { font-style: italic; color: var(--muted); }
+small { font-size: 0.875em; color: var(--muted); }
+
+code {
+  font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, monospace;
+  font-size: 0.9em;
+  padding: 2px 6px;
+  background: color-mix(in oklab, var(--accent) 10%, transparent);
+  border-radius: 6px;
+  color: var(--accent);
+}
+
+ul, ol { padding-left: 1.5em; }
+li { line-height: 1.7; margin-bottom: 0.5em; }
+
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+  margin: 2rem 0;
+}
+
+/* Selection */
+::selection {
+  background: color-mix(in oklab, var(--accent) 28%, transparent);
+  color: var(--text);
+}
+::-moz-selection {
+  background: color-mix(in oklab, var(--accent) 28%, transparent);
+  color: var(--text);
+}
+
+@media (prefers-color-scheme: dark) {
+  ::selection { background: color-mix(in oklab, var(--accent) 36%, transparent); }
+  ::-moz-selection { background: color-mix(in oklab, var(--accent) 36%, transparent); }
+}
+
+/* ============================================
+   4. LAYOUT & CONTAINERS
+   ============================================ */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (min-width: 768px) { .container { padding: 0 32px; } }
+@media (min-width: 1280px) { .container { padding: 0 40px; } }
+
+/* ============================================
+   5. UI ELEMENTS (Links, Buttons, Inputs)
+   ============================================ */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  text-underline-offset: 0.18em;
+  transition:
+    opacity var(--dur-2) var(--ease-out),
+    color var(--dur-2) var(--ease-out),
+    transform var(--dur-2) var(--ease-out),
+    text-decoration-color var(--dur-2) var(--ease-out);
+  will-change: transform, opacity;
+}
+
+a:hover {
+  opacity: 0.92;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in oklab, var(--accent) 60%, transparent);
+}
+
+a:active { opacity: 0.75; }
+
+/* Buttons & Form Controls */
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Touch / mobile tweaks */
+button, a, input, select, textarea {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* GPU acceleration helper */
+.gpu-accelerated {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Button specific */
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform var(--dur-2) var(--ease-out),
+    opacity var(--dur-2) var(--ease-out),
+    box-shadow var(--dur-2) var(--ease-out),
+    background-color var(--dur-2) var(--ease-out),
+    color var(--dur-2) var(--ease-out);
+}
+
+/* Рипл-эффект для кнопок при ховере */
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  button:hover, a:hover {
+    transition-duration: var(--dur-1);
+  }
+
+  button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: color-mix(in oklab, currentColor 16%, transparent);
+    transform: translate(-50%, -50%);
+    transition: width var(--dur-3) var(--ease-out), height var(--dur-3) var(--ease-out);
+    pointer-events: none;
+  }
+
+  button:hover::after {
+    width: 320px;
+    height: 320px;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  button:active { transform: scale(0.97); }
+}
+
+/* Disabled states */
+button:disabled,
+input:disabled,
+select:disabled,
+textarea:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+  filter: grayscale(0.3);
+}
+
+/* Focus styles */
+:where(a, button, input, select, textarea):focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: var(--radius-1);
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :where(a, button, input, select, textarea):focus-visible {
+    animation: focusRingPulse 1.5s var(--ease-in-out) infinite;
+  }
+}
+
+/* Placeholder */
+::placeholder { color: var(--muted); opacity: 0.7; }
+:-ms-input-placeholder { color: var(--muted); opacity: 0.7; }
+::-ms-input-placeholder { color: var(--muted); opacity: 0.7; }
+
+/* ============================================
+   6. MEDIA & IMAGES
+   ============================================ */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+img, video, iframe {
+  border-radius: var(--radius-1);
+}
+
+/* Lazy loading (мягко, без “липкого нуля”) */
+img[loading="lazy"] {
+  opacity: 0;
+  animation: fadeIn var(--dur-3) var(--ease-out) forwards;
+}
+
+/* ============================================
+   7. SCROLLBARS (WebKit)
+   ============================================ */
+::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  background: linear-gradient(
+    180deg,
+    var(--border),
+    color-mix(in oklab, var(--border) 78%, var(--accent))
+  );
+  border-radius: 8px;
+  border: 3px solid var(--bg);
+  transition: background var(--dur-2) var(--ease-out);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in oklab, var(--muted) 70%, var(--accent-soft));
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: var(--accent);
+}
+
+/* ============================================
+   8. UTILITIES & CLASSES
+   ============================================ */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Shadows */
+.shadow-soft {
+  box-shadow:
+    0 2px 8px color-mix(in oklab, var(--c-brand-900) 10%, transparent),
+    0 10px 26px color-mix(in oklab, var(--text) 8%, transparent);
+}
+
+.shadow-medium {
+  box-shadow:
+    0 4px 12px color-mix(in oklab, var(--c-brand-900) 14%, transparent),
+    0 18px 36px color-mix(in oklab, var(--text) 10%, transparent);
+}
+
+.shadow-strong {
+  box-shadow:
+    0 10px 28px color-mix(in oklab, var(--c-brand-900) 18%, transparent),
+    0 28px 56px color-mix(in oklab, var(--text) 14%, transparent);
+}
+
+/* Animation Utilities */
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in { animation: fadeIn var(--dur-3) var(--ease-out); }
+  .slide-up { animation: slideUp var(--dur-3) var(--ease-out); }
+  .scale-in { animation: scaleIn var(--dur-3) var(--ease-spring); }
+}
+
+/* ============================================
+   9. KEYFRAMES
+   ============================================ */
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes bodyFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes focusRingPulse {
+  0%, 100% { box-shadow: var(--focus-ring); }
+  50% { box-shadow: 0 0 0 6px color-mix(in oklab, var(--accent) 22%, transparent); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ============================================
+   10. MEDIA QUERIES (System)
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 767px) {
+  button, input, select {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    body { animation: none; }
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: var(--c-white) !important;
+    color: var(--c-ink-900) !important;
+  }
+
+  *, *::before, *::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    background: transparent !important;
+  }
+
+  a {
+    text-decoration: underline;
+    color: var(--c-ink-900) !important;
+  }
+
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.875em;
+    color: var(--c-ink-800);
+  }
+
+  img { max-width: 100%; page-break-inside: avoid; }
+
+  button, video, iframe, .sr-only { display: none !important; }
+}

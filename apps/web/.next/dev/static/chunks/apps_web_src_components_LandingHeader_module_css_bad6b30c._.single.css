@@ -1,0 +1,257 @@
+/* [project]/apps/web/src/components/LandingHeader.module.css [app-client] (css) */
+.LandingHeader-module__clXuSW__header {
+  width: 100%;
+  z-index: var(--z-sticky);
+  background: color-mix(in oklab, var(--panel) 75%, transparent);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-bottom: 1px solid color-mix(in oklab, var(--border) 40%, transparent);
+  box-shadow: 0 1px 0 color-mix(in oklab, var(--panel) 50%, transparent), 0 4px 24px color-mix(in oklab, var(--text) 3%, transparent);
+  transition: background var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base), transform var(--transition-fast);
+  will-change: transform;
+  position: sticky;
+  top: 0;
+  left: 0;
+  transform: translateZ(0);
+}
+
+.LandingHeader-module__clXuSW__header.LandingHeader-module__clXuSW__scrolled {
+  background: color-mix(in oklab, var(--panel) 85%, transparent);
+  box-shadow: 0 1px 0 color-mix(in oklab, var(--panel) 60%, transparent), 0 8px 32px color-mix(in oklab, var(--text) 6%, transparent);
+}
+
+.LandingHeader-module__clXuSW__row {
+  justify-content: space-between;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 2rem);
+  padding: clamp(1rem, 2vw, 1.5rem) 0;
+  display: flex;
+  position: relative;
+}
+
+.LandingHeader-module__clXuSW__brand {
+  letter-spacing: -.02em;
+  color: var(--text);
+  background: linear-gradient(135deg, var(--text) 0%, var(--accent) 100%);
+  -webkit-text-fill-color: transparent;
+  transition: background-position var(--dur-4) var(--ease-out), transform var(--transition-base);
+  cursor: default;
+  -webkit-user-select: none;
+  user-select: none;
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-weight: 700;
+  position: relative;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .LandingHeader-module__clXuSW__brand:hover {
+    background-position: 100% 0;
+    transform: translateX(-2px);
+  }
+
+  .LandingHeader-module__clXuSW__brand:after {
+    content: "";
+    background: linear-gradient(90deg, var(--accent), var(--accent-secondary));
+    width: 0;
+    height: 2px;
+    transition: width var(--dur-3) var(--ease-out);
+    border-radius: 2px;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+  }
+
+  .LandingHeader-module__clXuSW__brand:hover:after {
+    width: 100%;
+  }
+}
+
+.LandingHeader-module__clXuSW__lang {
+  background: color-mix(in oklab, var(--panel) 60%, transparent);
+  border: 1px solid color-mix(in oklab, var(--border) 50%, transparent);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px color-mix(in oklab, var(--text) 2%, transparent), inset 0 1px 0 color-mix(in oklab, var(--panel) 80%, transparent);
+  transition: background var(--transition-base), border-color var(--transition-base), transform var(--transition-base);
+  border-radius: 12px;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 8px;
+  display: flex;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .LandingHeader-module__clXuSW__lang:hover {
+    background: color-mix(in oklab, var(--panel) 80%, transparent);
+    border-color: color-mix(in oklab, var(--accent) 30%, transparent);
+    transform: translateY(-1px);
+  }
+}
+
+.LandingHeader-module__clXuSW__lang a {
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  min-width: 44px;
+  height: 36px;
+  color: var(--muted);
+  transition: color var(--transition-fast), background var(--transition-fast), transform var(--transition-fast);
+  animation: LandingHeader-module__clXuSW__langLinkFadeIn var(--dur-3) var(--ease-out) backwards;
+  background: none;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 clamp(10px, 2vw, 14px);
+  font-size: clamp(.8125rem, 1.5vw, .9375rem);
+  font-weight: 600;
+  display: inline-flex;
+  position: relative;
+}
+
+.LandingHeader-module__clXuSW__lang a:first-child {
+  animation-delay: 50ms;
+}
+
+.LandingHeader-module__clXuSW__lang a:nth-child(2) {
+  animation-delay: .1s;
+}
+
+.LandingHeader-module__clXuSW__lang a[aria-current="page"], .LandingHeader-module__clXuSW__lang a:active {
+  color: var(--text);
+  background: color-mix(in oklab, var(--accent) 12%, transparent);
+  box-shadow: 0 2px 6px color-mix(in oklab, var(--accent) 8%, transparent), inset 0 1px 0 color-mix(in oklab, var(--panel) 40%, transparent);
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .LandingHeader-module__clXuSW__lang a:hover {
+    color: var(--text);
+    background: color-mix(in oklab, var(--accent) 8%, transparent);
+    transform: translateY(-1px);
+  }
+
+  .LandingHeader-module__clXuSW__lang a:active {
+    transform: translateY(0)scale(.97);
+  }
+}
+
+.LandingHeader-module__clXuSW__lang a:focus-visible {
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--accent) 25%, transparent), 0 2px 8px color-mix(in oklab, var(--accent) 15%, transparent);
+  z-index: 1;
+  outline: none;
+}
+
+@media (max-width: 767px) {
+  .LandingHeader-module__clXuSW__row {
+    padding: .875rem 0;
+  }
+
+  .LandingHeader-module__clXuSW__brand {
+    font-size: 1.125rem;
+  }
+
+  .LandingHeader-module__clXuSW__lang {
+    gap: 2px;
+    padding: 4px 6px;
+  }
+
+  .LandingHeader-module__clXuSW__lang a {
+    min-width: 40px;
+    height: 32px;
+    padding: 0 10px;
+    font-size: .8125rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .LandingHeader-module__clXuSW__row {
+    padding: 1.125rem 0;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .LandingHeader-module__clXuSW__header {
+    background: color-mix(in oklab, var(--panel) 70%, transparent);
+    border-bottom-color: color-mix(in oklab, var(--border) 30%, transparent);
+    box-shadow: 0 1px 0 color-mix(in oklab, var(--panel) 40%, transparent), 0 4px 24px #0003;
+  }
+
+  @supports (color: lab(0% 0 0)) {
+    .LandingHeader-module__clXuSW__header {
+      box-shadow: 0 1px 0 color-mix(in oklab, var(--panel) 40%, transparent), 0 4px 24px lab(0% 0 0 / .2);
+    }
+  }
+
+  .LandingHeader-module__clXuSW__header.LandingHeader-module__clXuSW__scrolled {
+    background: color-mix(in oklab, var(--panel) 80%, transparent);
+    box-shadow: 0 1px 0 color-mix(in oklab, var(--panel) 50%, transparent), 0 8px 32px #0000004d;
+  }
+
+  @supports (color: lab(0% 0 0)) {
+    .LandingHeader-module__clXuSW__header.LandingHeader-module__clXuSW__scrolled {
+      box-shadow: 0 1px 0 color-mix(in oklab, var(--panel) 50%, transparent), 0 8px 32px lab(0% 0 0 / .3);
+    }
+  }
+
+  .LandingHeader-module__clXuSW__lang {
+    background: color-mix(in oklab, var(--panel) 50%, transparent);
+    border-color: color-mix(in oklab, var(--border) 40%, transparent);
+    box-shadow: 0 2px 8px #00000026, inset 0 1px 0 color-mix(in oklab, var(--panel) 60%, transparent);
+  }
+
+  @supports (color: lab(0% 0 0)) {
+    .LandingHeader-module__clXuSW__lang {
+      box-shadow: 0 2px 8px lab(0% 0 0 / .15), inset 0 1px 0 color-mix(in oklab, var(--panel) 60%, transparent);
+    }
+  }
+
+  .LandingHeader-module__clXuSW__lang a[aria-current="page"], .LandingHeader-module__clXuSW__lang a:active {
+    background: color-mix(in oklab, var(--accent) 18%, transparent);
+    box-shadow: 0 2px 6px color-mix(in oklab, var(--accent) 12%, transparent), inset 0 1px 0 color-mix(in oklab, var(--panel) 30%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .LandingHeader-module__clXuSW__header, .LandingHeader-module__clXuSW__brand, .LandingHeader-module__clXuSW__lang, .LandingHeader-module__clXuSW__lang a {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .LandingHeader-module__clXuSW__brand:after {
+    transition: none !important;
+  }
+}
+
+@keyframes LandingHeader-module__clXuSW__langLinkFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media print {
+  .LandingHeader-module__clXuSW__header {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    box-shadow: none;
+    background: none;
+    border: none;
+    position: static;
+  }
+
+  .LandingHeader-module__clXuSW__lang {
+    display: none;
+  }
+
+  .LandingHeader-module__clXuSW__brand {
+    -webkit-text-fill-color: inherit;
+    color: #000;
+    background: none;
+  }
+}
+
+/*# sourceMappingURL=apps_web_src_components_LandingHeader_module_css_bad6b30c._.single.css.map*/

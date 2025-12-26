@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///D:/%D0%A0%D0%9E%D0%A2%D0%9E%D0%A2%D0%90/films-site/apps/web/src/app/page.tsx"],"sourcesContent":["import StartPage from \"./StartPage\";\r\nexport default StartPage;\r\n"],"names":[],"mappings":";;;;;;;;;;uCACe"}}]
+}

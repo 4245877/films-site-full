@@ -1,0 +1,449 @@
+/* [project]/apps/web/src/pages/FilmsIndexPage.module.css [app-client] (css) */
+.FilmsIndexPage-module__Pjs3tq__page {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.FilmsIndexPage-module__Pjs3tq__hero {
+  border-radius: var(--radius-2, 16px);
+  border: 1px solid var(--border, #0000001f);
+  background: radial-gradient(900px 240px at 10% 0%, color-mix(in oklab, var(--accent, #6d6df6) 10%, transparent), transparent 60%), var(--panel, #00000005);
+  box-shadow: var(--shadow-1, 0 6px 18px #00000014);
+  margin-top: 14px;
+  margin-bottom: clamp(1.25rem, 3vw, 2rem);
+  padding: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+.FilmsIndexPage-module__Pjs3tq__h1 {
+  letter-spacing: -.02em;
+  margin: 0;
+  line-height: 1.15;
+}
+
+.FilmsIndexPage-module__Pjs3tq__heroText {
+  color: var(--muted, #000000b8);
+  max-width: 70ch;
+  margin: .6rem 0 0;
+  line-height: 1.55;
+}
+
+.FilmsIndexPage-module__Pjs3tq__stats {
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin-top: .9rem;
+  display: flex;
+}
+
+.FilmsIndexPage-module__Pjs3tq__stat {
+  border: 1px solid var(--border, #0000001f);
+  background: color-mix(in oklab, var(--panel, #fff) 96%, transparent);
+  box-shadow: var(--shadow-0, 0 2px 8px #0000000f);
+  border-radius: 999px;
+  align-items: baseline;
+  gap: .5rem;
+  padding: .55rem .75rem;
+  display: inline-flex;
+}
+
+.FilmsIndexPage-module__Pjs3tq__statValue {
+  color: var(--text, #000000eb);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.FilmsIndexPage-module__Pjs3tq__statLabel {
+  color: var(--muted, #000000ad);
+  font-size: .95rem;
+}
+
+.FilmsIndexPage-module__Pjs3tq__grid {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: clamp(1.25rem, 3vw, 2rem);
+  margin-top: clamp(1.25rem, 2.5vw, 1.75rem);
+  margin-bottom: clamp(2.25rem, 4vw, 3rem);
+  display: grid;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .FilmsIndexPage-module__Pjs3tq__grid {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .FilmsIndexPage-module__Pjs3tq__grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .FilmsIndexPage-module__Pjs3tq__grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+}
+
+.FilmsIndexPage-module__Pjs3tq__card {
+  background: var(--panel, #00000005);
+  border-radius: var(--radius-2, 16px);
+  border: 1px solid var(--border, #0000001f);
+  box-shadow: var(--shadow-1, 0 6px 18px #00000014);
+  cursor: pointer;
+  transition: transform var(--transition-base, .18s ease), box-shadow var(--transition-base, .18s ease), border-color var(--transition-base, .18s ease), background-color var(--transition-base, .18s ease);
+  will-change: transform;
+  backface-visibility: hidden;
+  color: inherit;
+  flex-direction: column;
+  gap: .75rem;
+  padding: clamp(1.35rem, 3vw, 1.85rem);
+  text-decoration: none;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.FilmsIndexPage-module__Pjs3tq__card:before {
+  content: "";
+  background: linear-gradient(90deg, var(--accent, #6d6df6), var(--accent-secondary, #44c7ff));
+  opacity: 0;
+  height: 3px;
+  transition: opacity var(--transition-base, .18s ease);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.FilmsIndexPage-module__Pjs3tq__card:after {
+  content: "";
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), color-mix(in oklab, var(--accent, #6d6df6) 8%, transparent) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity var(--dur-3, .22s) var(--ease-out, ease-out);
+  pointer-events: none;
+  z-index: 0;
+  position: absolute;
+  inset: 0;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .FilmsIndexPage-module__Pjs3tq__card:hover {
+    box-shadow: var(--shadow-2, 0 14px 36px #00000024);
+    border-color: color-mix(in oklab, var(--accent, #6d6df6) 30%, var(--border, #0000001f));
+    background-color: color-mix(in oklab, var(--panel, #fff) 98%, var(--accent, #6d6df6));
+    transform: translateY(-4px)scale(1.01);
+  }
+
+  .FilmsIndexPage-module__Pjs3tq__card:hover:before, .FilmsIndexPage-module__Pjs3tq__card:hover:after {
+    opacity: 1;
+  }
+
+  .FilmsIndexPage-module__Pjs3tq__card:hover .FilmsIndexPage-module__Pjs3tq__cardTitle {
+    color: var(--accent, #6d6df6);
+    transform: translateX(4px);
+  }
+
+  .FilmsIndexPage-module__Pjs3tq__card:hover .FilmsIndexPage-module__Pjs3tq__cardTitle:after {
+    opacity: 1;
+    transform: translateX(4px);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .FilmsIndexPage-module__Pjs3tq__card:active {
+    transition-duration: var(--dur-1, .12s);
+    transform: translateY(-2px)scale(.99);
+  }
+}
+
+.FilmsIndexPage-module__Pjs3tq__card:focus-visible {
+  box-shadow: var(--focus-ring, 0 0 0 4px #6d6df640), var(--shadow-2, 0 14px 36px #00000024);
+  border-color: var(--accent, #6d6df6);
+  outline: none;
+}
+
+.FilmsIndexPage-module__Pjs3tq__cardTitle {
+  z-index: 1;
+  letter-spacing: -.02em;
+  color: var(--text, #000000eb);
+  transition: color var(--transition-base, .18s ease), transform var(--transition-base, .18s ease);
+  text-wrap: balance;
+  align-items: center;
+  gap: .5rem;
+  font-size: clamp(1.2rem, 2.5vw, 1.45rem);
+  font-weight: 650;
+  line-height: 1.3;
+  display: flex;
+  position: relative;
+}
+
+.FilmsIndexPage-module__Pjs3tq__cardTitle:after {
+  content: "→";
+  opacity: 0;
+  transition: transform var(--transition-base, .18s ease), opacity var(--transition-base, .18s ease);
+  will-change: transform, opacity;
+  font-size: 1.15em;
+  display: inline-block;
+}
+
+.FilmsIndexPage-module__Pjs3tq__cardText {
+  z-index: 1;
+  color: var(--muted, #000000b3);
+  transition: color var(--transition-base, .18s ease);
+  text-wrap: pretty;
+  max-width: 55ch;
+  font-size: clamp(.92rem, 1.8vw, 1rem);
+  line-height: 1.6;
+  position: relative;
+}
+
+@media (hover: hover) {
+  .FilmsIndexPage-module__Pjs3tq__card:hover .FilmsIndexPage-module__Pjs3tq__cardText {
+    color: var(--text, #000000eb);
+  }
+}
+
+.FilmsIndexPage-module__Pjs3tq__cardMetaRow {
+  z-index: 1;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: auto;
+  padding-top: .25rem;
+  display: flex;
+  position: relative;
+}
+
+.FilmsIndexPage-module__Pjs3tq__pill {
+  border: 1px solid var(--border, #0000001f);
+  background: color-mix(in oklab, var(--panel, #fff) 96%, transparent);
+  box-shadow: var(--shadow-0, 0 2px 8px #0000000f);
+  color: var(--muted, #000000b8);
+  border-radius: 999px;
+  align-items: center;
+  padding: .35rem .6rem;
+  font-size: .86rem;
+  display: inline-flex;
+}
+
+.FilmsIndexPage-module__Pjs3tq__section {
+  border-top: 1px solid var(--border, #0000001f);
+  margin-top: clamp(1.75rem, 3vw, 2.25rem);
+  padding-top: clamp(1.1rem, 2vw, 1.35rem);
+}
+
+.FilmsIndexPage-module__Pjs3tq__sectionTitle {
+  letter-spacing: -.01em;
+  color: var(--text, #000000eb);
+  margin: 0 0 .65rem;
+  font-size: 1rem;
+}
+
+.FilmsIndexPage-module__Pjs3tq__list {
+  color: var(--text, #000000eb);
+  margin: 0;
+  padding-left: 1.1rem;
+  line-height: 1.6;
+}
+
+.FilmsIndexPage-module__Pjs3tq__list li {
+  margin: .35rem 0;
+}
+
+.FilmsIndexPage-module__Pjs3tq__note {
+  color: var(--muted, #000000ad);
+  margin: .8rem 0 0;
+  font-size: .92rem;
+}
+
+.FilmsIndexPage-module__Pjs3tq__grid[data-loading="true"] .FilmsIndexPage-module__Pjs3tq__card {
+  pointer-events: none;
+  animation: FilmsIndexPage-module__Pjs3tq__pulse 2s var(--ease-in-out, ease-in-out) infinite;
+}
+
+@keyframes FilmsIndexPage-module__Pjs3tq__pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .6;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .FilmsIndexPage-module__Pjs3tq__card {
+    animation: FilmsIndexPage-module__Pjs3tq__cardAppear var(--dur-4, .42s) var(--ease-out, ease-out) backwards;
+  }
+
+  .FilmsIndexPage-module__Pjs3tq__card:first-child {
+    animation-delay: 0s;
+  }
+
+  .FilmsIndexPage-module__Pjs3tq__card:nth-child(2) {
+    animation-delay: 80ms;
+  }
+
+  .FilmsIndexPage-module__Pjs3tq__card:nth-child(3) {
+    animation-delay: .16s;
+  }
+
+  .FilmsIndexPage-module__Pjs3tq__card:nth-child(4) {
+    animation-delay: .24s;
+  }
+
+  .FilmsIndexPage-module__Pjs3tq__card:nth-child(5) {
+    animation-delay: .32s;
+  }
+
+  .FilmsIndexPage-module__Pjs3tq__card:nth-child(6) {
+    animation-delay: .4s;
+  }
+
+  .FilmsIndexPage-module__Pjs3tq__card:nth-child(7) {
+    animation-delay: .48s;
+  }
+
+  .FilmsIndexPage-module__Pjs3tq__card:nth-child(8) {
+    animation-delay: .56s;
+  }
+
+  .FilmsIndexPage-module__Pjs3tq__card:nth-child(9) {
+    animation-delay: .64s;
+  }
+
+  .FilmsIndexPage-module__Pjs3tq__card:nth-child(n+10) {
+    animation-delay: .72s;
+  }
+
+  @keyframes FilmsIndexPage-module__Pjs3tq__cardAppear {
+    from {
+      opacity: 0;
+      transform: translateY(24px)scale(.96);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0)scale(1);
+    }
+  }
+}
+
+.FilmsIndexPage-module__Pjs3tq__grid:empty:after {
+  content: attr(data-empty-message);
+  text-align: center;
+  color: var(--muted, #000000ad);
+  grid-column: 1 / -1;
+  padding: clamp(3rem, 6vw, 5rem) 1.5rem;
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .FilmsIndexPage-module__Pjs3tq__hero {
+    padding: 1rem;
+  }
+
+  .FilmsIndexPage-module__Pjs3tq__card {
+    min-height: 140px;
+    padding: 1.2rem;
+  }
+
+  .FilmsIndexPage-module__Pjs3tq__cardTitle {
+    font-size: 1.125rem;
+  }
+
+  .FilmsIndexPage-module__Pjs3tq__cardText {
+    font-size: .95rem;
+    line-height: 1.5;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .FilmsIndexPage-module__Pjs3tq__card {
+      animation-duration: var(--dur-3, .32s);
+    }
+  }
+}
+
+@media (hover: none) {
+  .FilmsIndexPage-module__Pjs3tq__card:hover {
+    transform: none;
+  }
+
+  .FilmsIndexPage-module__Pjs3tq__card:active {
+    transition-duration: var(--dur-1, .12s);
+    transform: scale(.98);
+  }
+
+  .FilmsIndexPage-module__Pjs3tq__cardTitle:after {
+    opacity: .55;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .FilmsIndexPage-module__Pjs3tq__hero, .FilmsIndexPage-module__Pjs3tq__card {
+    border-width: 2px;
+  }
+
+  .FilmsIndexPage-module__Pjs3tq__card:before {
+    opacity: 1;
+    height: 4px;
+  }
+
+  .FilmsIndexPage-module__Pjs3tq__cardTitle:after {
+    opacity: 1;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .FilmsIndexPage-module__Pjs3tq__hero {
+    background: radial-gradient(900px 240px at 10% 0%, color-mix(in oklab, var(--accent, #6d6df6) 14%, transparent), transparent 60%), color-mix(in oklab, var(--panel, #ffffff0f) 95%, transparent);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .FilmsIndexPage-module__Pjs3tq__card {
+    background: color-mix(in oklab, var(--panel, #ffffff0f) 95%, transparent);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  @media (hover: hover) {
+    .FilmsIndexPage-module__Pjs3tq__card:hover {
+      background: color-mix(in oklab, var(--panel, #ffffff0f) 100%, var(--accent, #6d6df6) 3%);
+    }
+  }
+}
+
+@media print {
+  .FilmsIndexPage-module__Pjs3tq__hero {
+    box-shadow: none;
+    background: none;
+  }
+
+  .FilmsIndexPage-module__Pjs3tq__grid {
+    display: block;
+  }
+
+  .FilmsIndexPage-module__Pjs3tq__card {
+    page-break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+  }
+
+  .FilmsIndexPage-module__Pjs3tq__card:before, .FilmsIndexPage-module__Pjs3tq__card:after, .FilmsIndexPage-module__Pjs3tq__cardTitle:after {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .FilmsIndexPage-module__Pjs3tq__card, .FilmsIndexPage-module__Pjs3tq__cardTitle, .FilmsIndexPage-module__Pjs3tq__cardText, .FilmsIndexPage-module__Pjs3tq__card:before, .FilmsIndexPage-module__Pjs3tq__card:after {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .FilmsIndexPage-module__Pjs3tq__card:hover {
+    transform: none;
+  }
+}
+
+/*# sourceMappingURL=apps_web_src_pages_FilmsIndexPage_module_48c0b05a.css.map*/
