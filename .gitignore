@@ -1,4 +1,4 @@
-# =========================
+﻿# =========================
 # Dependencies
 # =========================
 node_modules/
@@ -19,15 +19,13 @@ out/
 # =========================
 **/.cache/
 **/.tmp/
-apps/cms/build/
-apps/cms/dist/
+ 
 
 # Загруженные файлы Strapi (обычно НЕ коммитят; в проде это volume/S3)
 apps/cms/public/uploads/
 
 # Если используешь SQLite локально — тоже не коммить
-*.sqlite
-*.sqlite3
+ 
 
 # =========================
 # Build artifacts / caches
@@ -69,6 +67,3 @@ Thumbs.db
 .vscode/
 .idea/
 *.iml
-
-# Игнорируем папку API, так как деплоимся на GitHub Pages (статику)
-apps/web/src/app/api/
