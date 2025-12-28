@@ -9,6 +9,7 @@ self.__BUILD_MANIFEST = {
     "/ContactsPage",
     "/FilmTPage",
     "/FilmTypePage",
+    "/FilmWatchPage",
     "/FilmsIndexPage",
     "/HomePage",
     "/NewsAddPage",
